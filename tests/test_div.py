@@ -22,3 +22,18 @@ def test_div_normal():
 # def test_div_por_cero():
 #     with pytest.raises(ZeroDivisionError):
 #         div(10, 0)
+
+@pytest.mark.parametrize("a, b, expected", [
+    (5, 2, 2.5),       
+    (-10, 2, -5.0),    
+    (15, -3, -5.0),    
+    (-12, -4, 3.0)     
+])
+def test_div_casos_multiples(a, b, expected):
+    """Prueba múltiples casos de división usando parametrización."""
+    assert div(a, b) == expected
+
+def test_div_por_cero():
+    """Verifica que dividir por cero lance ZeroDivisionError."""
+    with pytest.raises(ZeroDivisionError):
+        div(10, 0)

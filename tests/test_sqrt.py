@@ -22,3 +22,17 @@ def test_sqrt_cuadrado_perfecto():
 # def test_sqrt_negativo():
 #     with pytest.raises(ValueError):
 #         sqrt(-4)
+
+def test_sqrt_cero():
+    """Verifica que la raíz de 0 sea 0.0."""
+    assert sqrt(0) == 0.0
+
+def test_sqrt_decimal():
+    """Verifica la raíz de un número que no es cuadrado perfecto."""
+    # Usamos pytest.approx porque los floats pueden tener imprecisión
+    assert sqrt(2) == pytest.approx(1.41421356)
+
+def test_sqrt_negativo():
+    """Verifica que calcular la raíz de un número negativo lance ValueError."""
+    with pytest.raises(ValueError):
+        sqrt(-4)

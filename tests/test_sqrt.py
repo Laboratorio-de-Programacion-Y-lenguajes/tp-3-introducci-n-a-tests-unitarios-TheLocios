@@ -36,3 +36,5 @@ def test_sqrt_negativo():
     """Verifica que calcular la raíz de un número negativo lance ValueError."""
     with pytest.raises(ValueError):
         sqrt(-4)
+
+    #ACLARACION En este test me ayude con la IA y en el de pow tambien

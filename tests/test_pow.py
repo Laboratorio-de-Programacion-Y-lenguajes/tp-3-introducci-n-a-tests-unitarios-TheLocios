@@ -29,3 +29,5 @@ def test_pow_base_positiva():
 def test_pow_casos_multiples(a, b, expected):
     """Prueba múltiples casos de potencia usando parametrización."""
     assert pow_(a, b) == expected
+
+     #ACLARACION En este test me ayude con la IA y en el de sqrt tambien
